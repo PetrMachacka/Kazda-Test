@@ -1,0 +1,24 @@
+﻿@page "{txt?}/{Kolik?}"
+@model _19._09.Pages.Data.indexModel
+@{
+
+}
+<h1>@(this.Model.Text)</h1>
+
+<ul>
+    <li><a asp-page="Index" asp-page-handler="cisla">Cislo --</a></li>
+    <li><a asp-page="Index" asp-page-handler="cisla" asp-route-cislo="77">Cislo --</a></li>
+    <li><a asp-page="Index" asp-page-handler="cisla" asp-route-cislo="77">Cislo --</a></li>
+    <li><a asp-page="Index" asp-page-handler="cisla" asp-route-cislo="77">Cislo --</a></li>
+
+</ul>
+
+<form method="post">
+    <label asp-for="@Model.RegistraceData.Name">Jméno</label><input placeholder="křestní" />
+    <label asp-for="@Model.RegistraceData.surname">Přijmení:</label><input placeholder="přijmení" />
+    <label asp-for="@Model.RegistraceData.Email">e-mail:</label><input type="email" />
+    <span asp-validation-for="@Model.RegistraceData.Shoesize"></span>
+    <label asp-for="@Model.RegistraceData.Shoesize">Velikost nohy</label><input placeholder="44" />
+    <label asp-for="@Model.RegistraceData.IsAdult">Je plnoletý</label><input placeholder="ano" />
+    <button type="submit">Registrovat</button>
+</form>
